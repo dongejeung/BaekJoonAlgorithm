@@ -1,0 +1,67 @@
+
+ # 문제에서 제시해준 BufferedReader 탐색.
+ 
+ JRE System Library
+ 
+ > java.base
+ 
+ > java.io 
+ 
+ > BufferedReader.class
+ 
+ && Reader.class
+ 
+ =======
+ 
+ 타고 타다 보니까 길다.
+ 
+ 결국 무슨 파일에 있는 데이터를
+ 
+ Line 별 String으로 가져와서 활용하는데, 
+ 
+ marked 위치가 있고, 뭐 그런가 보다.(아마 끝지점 이런게 아닐까 예상.)
+ 
+ ---
+ 
+ BufferedReader br = new BufferedReader(); 라고 쓰면 에러가 나는데..
+ 
+ 사용법을 검색을 하자 이정도면..
+ 
+ ref) https://jhnyang.tistory.com/92
+ 
+ =======
+ 
+ BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+ 
+ 이런식으로 콘솔 입력을 받을 수 있을 것 같다.
+ 
+ content insistent로는 내가 잘 못봐서 그런건지 입력 방식을 파악하기 어려웠다.. ㅠㅠ
+ 
+ =======
+ 
+ 정리 
+ 
+ : 여기서의 버퍼란 입력값을 한 문자씩 끊어서 임시 메모리 저장소에 지속적으로 추가해줬다가,
+ 
+ 한꺼번에 덩어리로 데이터를 저장하는 식으로 쓰인다.
+ 
+ => 속도가 빠르다.
+ 
+ BufferedReader : 버퍼를 입력
+ 
+ BufferedWriter : 버퍼를 출력
+ 
+ Buffer flush : 버퍼에 남아있는 데이터를 출력(버퍼를 비우게 됨.)
+ 
+ =======
+ 
+ cf) Buffer 사용시 exception 처리 안하면 에러남.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
