@@ -1,6 +1,10 @@
 # BaekJoonAlgorithm
 
-=======
+===
+
+## Focus : 최대한 쌩으로 작성.
+
+===
 
 ## refactoring or to solve another answer
 
@@ -12,4 +16,3 @@
 
 - while문제들(10952, 10951, 1110) : 왜캐 문제 풀때마다 코드가 지저분한 것 같지.. 다른 식으로 풀어봐도 좋을 듯.
 
-- test
