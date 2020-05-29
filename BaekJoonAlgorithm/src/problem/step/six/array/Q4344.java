@@ -56,6 +56,7 @@ public class Q4344 {
 			A = ((double) B) / 10000;
 			System.out.println(A + "%");
 			
+			System.out.println("test");
 		}
 	}
 
