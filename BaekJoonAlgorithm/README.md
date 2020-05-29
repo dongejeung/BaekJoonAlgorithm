@@ -1,5 +1,13 @@
 # BaekJoonAlgorithm
 
+## - 왠만하면 쌩으로 푸는 것을 모토로
+
+## - 내장 함수들은 되도록 까보자
+
+## - 최대한 다양한 방식으로 문제풀이
+
+## - refactoring도 해주면 좋다
+
 =======
 
 ## refactoring or to solve another answer
