@@ -1,4 +1,4 @@
-package problem;
+package problem.step.eight.string;
 
 import java.util.Scanner;
 

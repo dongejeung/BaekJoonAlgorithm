@@ -9,11 +9,7 @@ public class testCase {
 	public static void main(String[] args) {
 		
 		try {
-			
-			DecimalFormat form = new DecimalFormat("#.###");
-			double a = 40.000; 
-			System.out.print(form.format(a));
-			
+			System.out.println("A");
 		}catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
@@ -22,10 +18,3 @@ public class testCase {
 	}
 
 }
-/*
-40.000%
-57.143%
-33.333%
-66.667%
-55.556%
-*/

@@ -1,0 +1,19 @@
+
+ # 캐스팅 팁.
+ 
+ - char to int
+ 
+ 1. int sum += input.charAt(i) - '0';
+ 
+ 
+ 
+ ===
+ 
+ cf) 배열은 타입이 정해져 있어서 type check가 안된다.
+ 
+ type check 방법. 
+ 
+ 1. a instanceof String => 원시타입은 안된다고 함.
+ 
+ 2. x(변수).getClass().getName();
+ 	

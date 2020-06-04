@@ -1,4 +1,4 @@
-package problem;
+package problem.step.seven.function;
 
 import java.util.ArrayList;
 import java.util.Scanner;
