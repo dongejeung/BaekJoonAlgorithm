@@ -9,7 +9,14 @@ public class testCase {
 	public static void main(String[] args) {
 		
 		try {
-			System.out.println("A");
+			
+			char[] alpabat = new char[26];
+			  
+			  for(int i=0; i<alpabat.length; i++) {
+				alpabat[i] = (char)('a'+i);
+				System.out.print(alpabat[i]+" ");
+			  }
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
