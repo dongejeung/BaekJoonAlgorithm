@@ -13,7 +13,7 @@ public class testCase {
 			char[] alpabat = new char[26];
 			  
 			  for(int i=0; i<alpabat.length; i++) {
-				alpabat[i] = (char)('a'+i);
+				alpabat[i] = (char)('A'+i);
 				System.out.print(alpabat[i]+" ");
 			  }
 			
