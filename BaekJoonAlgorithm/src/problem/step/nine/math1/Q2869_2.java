@@ -35,6 +35,20 @@ public class Q2869_2 {
 	 * 7-2. A / D 의 케이스를 생각해보자.
 	 * 자고 다음에 마저 보자.
 	 * 
+	 * ===
+	 * 
+	 * 1. A, D+A, 2D+A, ...
+	 * 
+	 * 2. 일반식(n-1)D + A
+	 * 
+	 * 3. (n-1)D + A >= V => N일 출력.
+	 *
+	 * 4. (n-1)D >= V - A
+	 * 
+	 * 5. (n-1) >= (V - A) / D
+	 * 
+	 * 6. n >= (V - A) / D + 1
+	 * 
 	*/	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -45,10 +59,8 @@ public class Q2869_2 {
 		int D = A-B;
 		int R = V % D;
 		
-		/*
-		 * int N = 1; while((N-1)*D + A <= V) { N++; } System.out.println(N-1);
-		 */
+		double N = Math.round((V - A) / D) + 1;
 		
-		
+		System.out.println(N);
 	}
 }
