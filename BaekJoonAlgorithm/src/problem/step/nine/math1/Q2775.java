@@ -20,36 +20,34 @@ public class Q2775 {
 		Scanner sc = new Scanner(System.in);
 		// 테스트 케이스 수
 		int T = sc.nextInt();
+		int[][] test = new int[T][2];
+		for (int i = 0; i < test.length; i++) {
+				test[i][0] = sc.nextInt()+1;
+				test[i][1] = sc.nextInt();
+		}
 		
-		for (int i = 0; i < T; i++) {
-			int H = sc.nextInt();
-			int W = sc.nextInt();
+		for (int i = 0; i < test.length; i++) {
+			int H = test[i][0];
+			int W = test[i][1];
 			
 			int[][] temp = new int[H][W];
-
-			for (int j = 1; j <= temp.length; j++) {
+			
+			for (int j = 0; j < temp.length; j++) {
 				
 				int sum = 0;
-				for (int k = 1; k <= temp[j].length; k++) {
+				for (int k = 0; k < temp[0].length; k++) {
 					
 					// 0층의 초기값 init
-					if(j==1) {
-						temp[j][k] = k;
+					if(j==0) {
+						temp[j][k] = k+1;
 					}else {
-						int accum = 0;
-						for (int l = 1; l <= j; l++) {
-							accum += temp[j][k];
+						for (int l = 0; l <= k; l++) {
+							temp[j][k] += temp[j-1][l];
 						}
-						
-						temp[j][k] = accum;
-						
 					}
-					
 				}
-				
 			}
-			
-			System.out.println(temp);
+			System.out.println(temp[H-1][W-1]);
 		}
 		
 	}
