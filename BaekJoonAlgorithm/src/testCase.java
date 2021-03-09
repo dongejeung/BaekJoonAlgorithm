@@ -23,5 +23,8 @@ public class testCase {
 		System.out.printf("%f%n", f);
 		System.out.printf("%X%n", i);
 		
+		double temp = 123515.5;
+		//double temp2 = temp >> 1; 실수의 쉬프트 연산시 에러가 남.
+		
 	}
 }
