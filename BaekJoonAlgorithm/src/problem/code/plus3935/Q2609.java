@@ -1,5 +1,7 @@
 package problem.code.plus3935;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -12,23 +14,27 @@ public class Q2609 {
 		int M = sc.nextInt();
 		int N = sc.nextInt();
 		
-		int diff;
-		if(M > N) diff = M - N;
-		else diff = N - M;
-		
-		int GCF = 0;
-		for (int i = (diff/2 +1); i > 2 ; i--) {
-			if(M%i == 0 && N%i == 0) {
-				GCF = i;
-				break;
+		List<Integer> MFactors = new LinkedList<Integer>();
+		int Mrest = M;
+		final int MAX_M_FACTOR = (M/2 +1);
+		for (int i = MAX_M_FACTOR; i > 2 ; i--) {
+			if(Mrest%i == 0) {
+				MFactors.add(i);
+				if(Mrest == 1) break;
+				else i = MAX_M_FACTOR;
 			}
 		}
 		
-		int LCM = 0;
-		for (int i = (diff/2 +1); i > 2 ; i--) {
-			if(M%i == 0 && N%i == 0) {
-				LCM = i;
-				break;
+		//MFactors.sort(c);
+		
+		List<Integer> NFactors = new LinkedList<Integer>();
+		int Nrest = N;
+		final int MAX_N_FACTOR = (N/2 +1);
+		for (int i = MAX_N_FACTOR; i > 2 ; i--) {
+			if(Nrest%i == 0) {
+				NFactors.add(i);
+				if(Nrest == 1) break;
+				else i = MAX_N_FACTOR;
 			}
 		}
 		
