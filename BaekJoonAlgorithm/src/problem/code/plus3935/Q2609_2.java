@@ -58,7 +58,6 @@ public class Q2609_2 {
 			}
 		}
 		
-		// 곱연산을 위해 1로 init 함. 최대공약수가 없을 경우 익셉션 발생 가능. 이떄 0을 넣어본다.
 		int GCF = 1;
 		for(Integer num: primeNums) {
 			int MCnt = divideCnt(M, num);
@@ -81,11 +80,14 @@ public class Q2609_2 {
 		int n = num;
 		int qoutient = n / dividend;
 		int rest = n % dividend;
-		while(rest == 0 && qoutient > 1 && qoutient != rest) {
+		while(rest == 0) {
 			result += 1;
 			n /= dividend;
 			qoutient = n / dividend;
 			rest = n % dividend;
+			
+			if(n == dividend) break;
+			
 		}
 		
 		return result;
