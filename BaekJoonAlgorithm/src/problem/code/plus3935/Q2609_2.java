@@ -1,5 +1,6 @@
 package problem.code.plus3935;
 
+import java.io.BufferedWriter;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -30,65 +31,75 @@ import java.util.Scanner;
  * 	9. 소수 구하는 것이 잘못되었었음.
  * 
  * 	10. 에라토스테네스의 체 같은 것을 적용할 수도 있을 듯.
+ * 
+ * 	11. 아아 두 수가 같은 경우..
  */
 public class Q2609_2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int M = sc.nextInt();
 		int N = sc.nextInt();
-
-		int biggerNum = 0;
-		if(M-N > 0)
-			biggerNum = M;
-		else
-			biggerNum = N;
-		List<Integer> primeNums = new LinkedList<Integer>();
-		for (int i = 2; i <= biggerNum; i++) {
-			primeNums.add(i);
-		}
 		
-		for (int i = 2; i <= biggerNum; i++) {
-			for (int j = 2; j <= i; j++) {
-				int quotient = i / j;
-				int rest = i % j;
-				if(quotient > 1 && rest == 0) {
-					int index = primeNums.indexOf(i);
-					if(index != -1) primeNums.remove(index);
+		if(M == N) {
+			System.out.println(M);
+			System.out.println(N);
+		}else {
+			int biggerNum = 0;
+			if(M-N > 0)
+				biggerNum = M;
+			else
+				biggerNum = N;
+			List<Integer> primeNums = new LinkedList<Integer>();
+			for (int i = 2; i <= biggerNum; i++) {
+				primeNums.add(i);
+			}
+			
+			for (int i = 2; i <= biggerNum; i++) {
+				for (int j = 2; j <= i; j++) {
+					//int quotient = i / j;
+					int rest = i % j;
+					if((int)Math.floor(i / j) > 1 && rest == 0) {
+						int index = primeNums.indexOf(i);
+						if(index != -1) primeNums.remove(index);
+					}
 				}
 			}
-		}
-		
-		int GCF = 1;
-		for(Integer num: primeNums) {
-			int MCnt = divideCnt(M, num);
-			int NCnt = divideCnt(N, num);
-			if(MCnt > 0 && NCnt > 0) {
-				if(MCnt < NCnt)
-					GCF *= (num*MCnt);
-				else
-					GCF *= (num*NCnt);
+			
+			int GCF = 1;
+			for(Integer num: primeNums) {
+				int MFactor = divideCnt(M, num);
+				int NFactor = divideCnt(N, num);
+				if(MFactor > 1 && NFactor > 1) {
+					if(MFactor < NFactor)
+						GCF *= MFactor;
+					else
+						GCF *= NFactor;
+				}
 			}
+	
+			int LCM = (M / GCF) * (N / GCF) * GCF;
+			System.out.println(GCF);
+			System.out.println(LCM);
+			
+			sc.close();
 		}
-
-		int LCM = GCF * (M / GCF )*(N / GCF );
-		System.out.println(GCF);
-		System.out.println(LCM);
 	}
 	
 	public static int divideCnt(int num, int dividend) {
 		int result = 0;
+		int cnt = 0;
 		int n = num;
-		int qoutient = n / dividend;
 		int rest = n % dividend;
-		while(rest == 0) {
-			result += 1;
+		while((int)Math.floor(n / dividend) > 0 && rest == 0) {
+			cnt += 1;
 			n /= dividend;
-			qoutient = n / dividend;
-			rest = n % dividend;
 			
 			if(n == dividend) break;
+			rest = n % dividend;
 			
 		}
+		
+		result = (int)Math.pow(dividend, cnt);
 		
 		return result;
 	}
