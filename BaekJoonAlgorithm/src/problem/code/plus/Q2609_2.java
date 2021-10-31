@@ -1,4 +1,4 @@
-package problem.code.plus3935;
+package problem.code.plus;
 
 import java.io.BufferedWriter;
 import java.util.HashMap;

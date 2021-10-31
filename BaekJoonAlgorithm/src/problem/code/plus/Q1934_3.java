@@ -1,4 +1,4 @@
-package problem.code.plus3935;
+package problem.code.plus;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
