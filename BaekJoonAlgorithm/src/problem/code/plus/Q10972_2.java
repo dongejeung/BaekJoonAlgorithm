@@ -18,7 +18,7 @@ import java.util.StringTokenizer;
  *	
  *	5. nPr = R(n+1) / R(n -r +1)  
  */
-public class Q10972 {
+public class Q10972_2 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -42,12 +42,6 @@ public class Q10972 {
 	}
 	
 	
-	public static int factorial(int N, int N_fact) {
-		if(N==1) return N_fact;
-		else return factorial(N-1, N * (N-1));
-	}
-
-	
 	public static boolean chk_last_Pn(int[] arr) {
 		boolean rs = true;
 		for (int i = 0; i < arr.length; i++) {
@@ -60,25 +54,26 @@ public class Q10972 {
 		return rs;
 	}
 	
-	
-	// 가능한 순열을 이차원배열에 모두 담음.
-	// 순열의 경우의 수 : nPr = n! / (n - r)!
-	public static String next_Pn(int[] Pn) {
-		String rs = "";
-		
-		int N = Pn.length;
-		int nPr_cnt = factorial(N, 1);
-		
-		int[][] nPr_arr = new int[nPr_cnt][N];
-		for (int i = 0; i < nPr_arr.length; i++) {
-			int[] nPr = nPr_arr[i];
-			if(nPr.equals(Pn)) {
-				
+	public static int get_fixed_order(int[] Pn) {
+		int rs = 0;
+		for (int i = 0; i < Pn.length; i++) {
+			if(Pn[i] != (Pn.length - i)) {
+				rs = i;
+				break;
 			}
 			
 		}
 		
+		return rs;
+	}
+	
+	
+	public static String get_next_Pn(int[] Pn) {
+		String rs = "";
 		
+		// 앞 숫자부터 고정되어 있는 부분을 구한다.
+		int fixed_order = get_fixed_order(Pn);
+				
 		return rs;
 	}
 	
@@ -88,7 +83,7 @@ public class Q10972 {
 		
 		if(!chk_last_Pn(Pn)) return "-1";
 		
-		return rs;
+		return get_next_Pn(Pn);
 	}
 	
 }
