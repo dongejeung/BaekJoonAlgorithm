@@ -13,5 +13,6 @@ public class Q2438 {
 			}
 			System.out.println();
 		}
+		sc.close();
 	}
 }

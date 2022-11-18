@@ -32,6 +32,7 @@ public class Q10996 {
 			
 		}
 		
+		sc.close();
 	}
 
 }

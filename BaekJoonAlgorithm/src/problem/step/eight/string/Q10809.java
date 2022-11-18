@@ -38,6 +38,6 @@ public class Q10809 {
 		for (int i = 0; i < alpabat.length; i++) {
 			System.out.print(s.indexOf(alpabat[i]) + " ");
 		}
-		
+		sc.close();
 	}
 }

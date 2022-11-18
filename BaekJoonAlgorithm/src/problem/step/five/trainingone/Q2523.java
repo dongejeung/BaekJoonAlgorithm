@@ -26,6 +26,7 @@ public class Q2523 {
 //		for (int i = N; 0 < i; i--) {
 //			System.out.println("hey");
 //		}
+		sc.close();
 	}
 
 }

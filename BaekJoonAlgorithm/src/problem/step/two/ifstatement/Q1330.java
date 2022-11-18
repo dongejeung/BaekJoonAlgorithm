@@ -14,7 +14,8 @@ public class Q1330 {
 			System.out.println("<");
 		}else {
 			System.out.println("==");
-		}
+		}		
+		sc.close();
 	}
 
 }

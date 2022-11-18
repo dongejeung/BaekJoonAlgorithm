@@ -5,8 +5,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.StringTokenizer;
 
 /*
@@ -86,10 +84,10 @@ public class Q1934_2 {
 		}
 		
 		// Common factor
-		int cf = 1;
+//		int cf = 1;
 		// 1은 필요없고, 2부터 약수인지 아닌지 나눌 것이다.
 		for (int i = 2; i <= smaller; i++) {
-			int divisor = i;
+//			int divisor = i;
 			
 			// 여기서 재귀가 들어갈 수 있겠다. 메서드로 빼는 것이 맞겠다.
 			int a = findFactor(0, A, i);

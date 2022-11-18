@@ -10,6 +10,7 @@ public class Q2588 {
 		int B = sc.nextInt();
 		
 		System.out.println(A+B);
+		sc.close();
 	}
 
 }

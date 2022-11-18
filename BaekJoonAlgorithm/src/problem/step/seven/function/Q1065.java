@@ -14,7 +14,7 @@ public class Q1065 {
 		}else if (b<100 && b >= 1) {
 			System.out.println(b);
 		}else if(b >= 100 && b < 1000) {
-			ArrayList isometric = new ArrayList();
+			ArrayList<Integer> isometric = new ArrayList<Integer>();
 			for (int i = 100; i <= b; i++) {
 				int a = i;
 				// 자리수 추출.
@@ -33,5 +33,6 @@ public class Q1065 {
 			}
 			System.out.println(isometric.size()+99);
 		}		
+		scan.close();
 	}
 }

@@ -60,6 +60,6 @@ public class Q10250_3 {
 			System.out.println(temp[N-1]);
 		}
 		
-		
+		sc.close();
 	}
 }

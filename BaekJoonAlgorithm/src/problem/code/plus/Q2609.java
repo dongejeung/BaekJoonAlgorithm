@@ -1,8 +1,6 @@
 package problem.code.plus;
 
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -50,7 +48,7 @@ public class Q2609 {
 		Map<String, Integer> NFactors = new HashMap<String, Integer>();
 		
 		for (Integer num : primeNums) {
-			int qoutientM = M / num;
+			int qM = M / num;
 			int restM = M % num;
 			if(restM == 0) {
 				int cnt = divideCnt(M, num);
@@ -60,7 +58,7 @@ public class Q2609 {
 				MFactors.put(num.toString(), cnt);
 			}
 			
-			int qoutientN = N / num;
+			int qN = N / num;
 			int restN = N % num;
 			if(restN == 0) {
 				int cnt = divideCnt(N, num);
@@ -81,6 +79,7 @@ public class Q2609 {
 				}
 			}
 		}	
+		sc.close();
 	}
 	
 	public static int divideCnt(int num, int dividend) {

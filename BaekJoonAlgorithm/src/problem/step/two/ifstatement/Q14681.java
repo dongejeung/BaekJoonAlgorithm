@@ -18,5 +18,6 @@ public class Q14681 {
 		}else {
 			System.out.println(4);
 		}
+		sc.close();
 	}
 }

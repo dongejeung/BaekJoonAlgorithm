@@ -23,6 +23,7 @@ public class Q2446 {
 			System.out.println();
 		}
 		
+		sc.close();
 	}
 
 }

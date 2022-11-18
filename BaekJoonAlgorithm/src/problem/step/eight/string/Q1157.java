@@ -77,9 +77,8 @@ public class Q1157 {
 				}
 			}
 			
-		}
-		
-		
+		}	
+		sc.close();
 	}
 	
 }

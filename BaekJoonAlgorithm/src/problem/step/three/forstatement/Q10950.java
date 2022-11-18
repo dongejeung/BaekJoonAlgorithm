@@ -20,5 +20,6 @@ public class Q10950 {
 			int C = sc.nextInt();
 			System.out.println(B + C);
 		}
+		sc.close();
 	}
 }

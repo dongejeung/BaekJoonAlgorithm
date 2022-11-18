@@ -40,5 +40,6 @@ public class Q1193 {
 		
 		
 		System.out.println(molecule +"/"+ denominator);
+		sc.close();
 	}
 }

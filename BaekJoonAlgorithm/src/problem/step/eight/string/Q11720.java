@@ -19,5 +19,6 @@ public class Q11720 {
 		
 		System.out.println(sum);
 		
+		sc.close();
 	}
 }

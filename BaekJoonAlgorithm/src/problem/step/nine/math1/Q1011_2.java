@@ -34,6 +34,6 @@ public class Q1011_2 {
 			}
 			
 		}
+		sc.close();
 	}
-	
 }

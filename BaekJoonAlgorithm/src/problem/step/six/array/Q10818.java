@@ -50,6 +50,8 @@ public class Q10818 {
 		
 		System.out.print(nums[0] + " ");
 		System.out.print(nums[N-1]);
+		
+		sc.close();
 	}
 
 }

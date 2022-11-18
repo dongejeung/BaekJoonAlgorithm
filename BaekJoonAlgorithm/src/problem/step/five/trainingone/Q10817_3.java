@@ -41,7 +41,7 @@ public class Q10817_3 {
 		
 		// 출력하기
 		System.out.println(nums[1]);
-
+		sc.close();
 	}
 
 }

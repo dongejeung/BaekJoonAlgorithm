@@ -29,6 +29,7 @@ public class Q1110 {
 			}
 		}
 		System.out.println(i);
+		sc.close();
 	}
 
 }

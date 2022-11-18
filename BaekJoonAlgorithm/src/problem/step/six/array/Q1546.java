@@ -36,6 +36,7 @@ public class Q1546 {
 		
 		System.out.println(sum / N );
 		
+		sc.close();
 	}
 
 }

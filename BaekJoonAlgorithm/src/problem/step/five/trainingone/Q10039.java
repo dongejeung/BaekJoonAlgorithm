@@ -16,6 +16,7 @@ public class Q10039 {
 			sum += A;
 		}
 		System.out.println(sum / 5);
+		sc.close();
 	}
 
 }

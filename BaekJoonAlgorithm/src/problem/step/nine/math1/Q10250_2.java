@@ -44,7 +44,6 @@ public class Q10250_2 {
 				
 			}
 		}
-		
-		
+		sc.close();
 	}
 }

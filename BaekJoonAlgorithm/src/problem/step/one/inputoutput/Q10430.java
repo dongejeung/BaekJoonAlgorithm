@@ -12,7 +12,7 @@ public class Q10430 {
 		
 		int C = A * B;
 		
-		ArrayList<Integer> number = new ArrayList();
+		ArrayList<Integer> number = new ArrayList<Integer>();
 		int i = 0;
 		while(B/10 != 0) {
 			int temp = B%10;
@@ -31,6 +31,8 @@ public class Q10430 {
 		}
 		
 		System.out.println(C);
+		
+		sc.close();
 	}
 
 }

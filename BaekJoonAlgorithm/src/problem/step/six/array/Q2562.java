@@ -47,6 +47,6 @@ public class Q2562 {
 				System.out.println(i+1);
 			}
 		}
-		
+		sc.close();
 	}
 }

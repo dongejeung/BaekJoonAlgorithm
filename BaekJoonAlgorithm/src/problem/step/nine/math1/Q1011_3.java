@@ -125,6 +125,7 @@ public class Q1011_3 {
 			}
 			
 		}
+		sc.close();
 	}
 	
 	public static int calRest(int additionalCnt, int restDistance, int rootDistance) {

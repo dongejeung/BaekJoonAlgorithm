@@ -10,6 +10,7 @@ public class Q1001 {
 		int B = sc.nextInt();
 		
 		System.out.println(A-B);
+		sc.close();
 	}
 
 }

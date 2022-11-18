@@ -11,5 +11,6 @@ public class Q11021 {
 			int C = sc.nextInt();
 			System.out.println("Case #" + i + ": " + (B + C));
 		}
+		sc.close();
 	}
 } 

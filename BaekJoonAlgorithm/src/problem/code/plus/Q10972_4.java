@@ -109,8 +109,8 @@ public class Q10972_4 {
 				break;
 			}
 			
-			List<Integer> head = new LinkedList(Pn.subList(0, tail_start));
-			List<Integer> tail = new LinkedList(Pn.subList(tail_start, N));
+			List<Integer> head = new LinkedList<Integer>(Pn.subList(0, tail_start));
+			List<Integer> tail = new LinkedList<Integer>(Pn.subList(tail_start, N));
 			if(is_reverseOrder(tail)) {
 				tail_start--;
 				continue;

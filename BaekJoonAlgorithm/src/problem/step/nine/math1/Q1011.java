@@ -56,6 +56,7 @@ public class Q1011 {
 			}
 			
 		}
+		sc.close();
 	}
 	
 	// 거리가 홀수

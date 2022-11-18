@@ -15,6 +15,7 @@ public class Q11654 {
 		String a = sc.next();
 		byte[] b = a.getBytes();
 		System.out.println(b[0]);
-		
+	
+		sc.close();
 	}
 }

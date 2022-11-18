@@ -22,5 +22,6 @@ public class Q1712 {
 			System.out.println(cnt);
 		}
 		
+		sc.close();
 	}
 }

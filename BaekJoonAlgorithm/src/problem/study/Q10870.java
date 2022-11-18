@@ -23,6 +23,7 @@ public class Q10870 {
 			
 			System.out.println(numList.get(N));
 		}
+		sc.close();
 	}
 	
 	public static int calNextNum(int fn1, int fn2) {

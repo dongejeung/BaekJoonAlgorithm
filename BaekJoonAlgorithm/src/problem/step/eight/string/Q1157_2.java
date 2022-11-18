@@ -14,6 +14,6 @@ public class Q1157_2 {
 		for(int i=0; i < s.length(); i++) {
 			
 		}
-		
+		sc.close();
 	}
 }

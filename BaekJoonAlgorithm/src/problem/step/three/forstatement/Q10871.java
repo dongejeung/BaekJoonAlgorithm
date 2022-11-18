@@ -23,6 +23,7 @@ public class Q10871 {
 			}
 		}
 		
+		sc.close();
 	}
 
 }

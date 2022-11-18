@@ -22,6 +22,7 @@ public class Q10952 {
 			System.out.println(sum);
 			
 		}
+		sc.close();
 	}
 
 }

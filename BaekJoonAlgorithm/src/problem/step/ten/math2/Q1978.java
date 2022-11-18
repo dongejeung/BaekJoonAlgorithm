@@ -30,5 +30,6 @@ public class Q1978 {
 		}
 		System.out.println(cnt);
 		
+		sc.close();
 	}
 }

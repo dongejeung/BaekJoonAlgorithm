@@ -9,5 +9,6 @@ public class Q10757 {
 		BigInteger A = sc.nextBigInteger();
 		BigInteger B = sc.nextBigInteger();
 		System.out.println(A.add(B));
+		sc.close();
 	}
 }
